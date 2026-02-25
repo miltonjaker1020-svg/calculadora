@@ -18,8 +18,8 @@ while True:
     if opcion==1:
          while True:
           try:
-             nu = int(input("Favor ingresar el primer número que deseas sumar: "))
-             num = int(input("Favor ingresar el segundo número: "))
+             nu = float(input("Favor ingresar el primer número que deseas sumar: "))
+             num = float(input("Favor ingresar el segundo número: "))
              print(f"el resultado de tu suma fue {nu + num}")
              break
           except ValueError:
@@ -27,19 +27,27 @@ while True:
     if opcion==2:
        while True:
           try:
-             nu = int(input("Favor ingresar el primer número : "))
-             num = int(input("Favor ingresar el segundo número: "))
-             print(f"el resultado de tu resta fue {nu - num}")
+              
+             nu = float(input("Favor ingresar el primer número : "))
+             num =float(input("Favor ingresar el segundo número: "))
+
+             
+             if nu <0 or num <0 :
+                 print("favor poner un numero que sea positivo")
+                 continue
+                
+             print(f"el resultado de la resta fue de {nu - num}")
              break
+             
           except ValueError:
             print("Favor ingresar números válidos.")
     if opcion==3:
        
        while True:
           try:
-             nu = int(input("Favor ingresar el primer número : "))
-             num = int(input("Favor ingresar el segundo número: "))
-             print(f"el resultado de tu resta fue {nu * num}")
+             nu = float(input("Favor ingresar el primer número : "))
+             num = float(input("Favor ingresar el segundo número: "))
+             print(f"el resultado de tu multiplicacion fue {nu * num}")
              break
           except ValueError:
             print("Favor ingresar números válidos.")
@@ -48,23 +56,23 @@ while True:
           try:
              nu = int(input("Favor ingresar el primer número : "))
              num = int(input("Favor ingresar el segundo número: "))
-             print(f"el resultado de tu resta fue {nu / num}")
+             print(f"el resultado de tu divicion fue {nu / num}")
              break
           except ValueError:
             print("Favor ingresar números válidos.")
     if opcion==5:
         while True:
           try:
-             nu = int(input("Favor ingresar el número que desea potenciar : "))
-             num = int(input("Favor ingresar el segundo número: "))
-             print(f"el resultado de tu resta fue {nu ** num}")
+             nu = float(input("Favor ingresar el número que desea potenciar : "))
+             num = float(input("Favor ingresar la potencia : "))
+             print(f"el resultado de tu potencia fue {nu ** num}")
              break
           except ValueError:
             print("Favor ingresar números válidos.")
     if opcion==6:
         while True:
           try:
-             nu = int(input("Favor ingresar el número al que deseas sacarle raiz : "))
+             nu = float(input("Favor ingresar el número al que deseas sacarle raiz : "))
              raiz=nu**0.5
              print(f"el resultado de tu raiz fue {raiz}")
              break
@@ -76,9 +84,9 @@ while True:
         while True:
           try:
              nu = int(input("Favor ingresar el primer número : "))
-             num = int(input("Favor ingresar el porcentaje de dicho número: "))
+             num = int(input("Favor ingresar el porcentaje que desea saber de dicho número: "))
              por=(nu*num)/100
-             print(f"el resultado de tu resta fue {por}")
+             print(f"el resultado de tu porcentaje fue {por}")
              break
           except ValueError:
             print("Favor ingresar números válidos.")
@@ -89,7 +97,7 @@ while True:
           try:
              nu = int(input("Favor ingresar el primer número : "))
              num = int(input("Favor ingresar el segundo número: "))
-             print(f"el resultado de tu resta fue {nu % num}")
+             print(f"el resultado de tu modulo fue {nu % num}")
              break
           except ValueError:
             print("Favor ingresar números válidos.")
@@ -106,4 +114,4 @@ while True:
           promedio = s / cantidad
 
         print("El promedio es:", promedio)
-    
+        break
