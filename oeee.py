@@ -1,4 +1,4 @@
-pciones=1,2,3,4,5,6,7,8,9
+opciones=1,2,3,4,5,6,7,8,9
 
 while True:
     print("Bienvenido, favor ingresar una de las opciones")
